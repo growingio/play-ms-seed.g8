@@ -16,7 +16,12 @@ sbt new growingio/play-ms-seed.g8
 
 ## Scaffolding 
 
-输入 `g8Scaffold init` 来初始化子项目。
+输入 `g8Scaffold init` 来初始化子项目:
+
+```
+cd play-ms-seed
+sbt "g8Scaffold init"
+```
 
 ## Running locally
 
