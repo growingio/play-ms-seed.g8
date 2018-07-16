@@ -17,11 +17,11 @@ class HelloControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injectin
 
     "render the index page from a new instance of controller" in {
       val controller = new HelloController(stubControllerComponents())
-      val hello = controller.index().apply(FakeRequest(GET, "/"))
+      val hello = controller.index("Ai").apply(FakeRequest(GET, "/"))
 
       status(hello) mustBe OK
       contentType(hello) mustBe Some("text/plain")
-      contentAsString(hello) must include("Hello")
+      contentAsString(hello) must include("Hello Ai")
     }
 
   }

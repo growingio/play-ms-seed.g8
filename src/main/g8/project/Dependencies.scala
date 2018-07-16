@@ -3,22 +3,21 @@ import sbt._
 object Dependencies {
 
   object Versions {
-    val config = "1.3.3"
-    val scala212 = "2.12.6"
-    val scalatest = "3.0.5"
-    val scala211 = "2.11.11"
+    val scala = "2.12.6"
+    val dryad = "1.1.0-SNAPSHOT"
+    val scalatestplusPlay = "$scalatestplusplay_version$"
   }
 
   object Compile {
-    val config = "com.typesafe" % "config" % Versions.config
+    val dryad = "io.growing" %% "dryad-consul" % Versions.dryad
   }
 
-  object Test {
-    val scalaTest: ModuleID = "org.scalatest" %% "scalatest" % Versions.scalatest % "test"
+  object Tests {
+    val scalatestPlus = "org.scalatestplus.play" %% "scalatestplus-play" % Versions.scalatestplusPlay % Test
   }
 
   import Compile._
 
-  lazy val dependencies = Seq(config, Test.scalaTest)
+  lazy val dependencies = Seq(dryad, Tests.scalatestPlus)
 
 }

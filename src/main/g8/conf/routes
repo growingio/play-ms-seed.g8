@@ -3,5 +3,9 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
+# Healthy check controller
+
+GET        /healthy-check        controllers.HealthyCheckController.healthyCheck()
+
 # An example controller showing a sample home page
-GET     /                           controllers.HelloController.index
+GET        /:name                controllers.HelloController.index(name: String)

@@ -1,17 +1,20 @@
+import Dependencies._
+import Dependencies.Versions
+
 name := """$name$"""
+
 organization := "$organization$"
 
 version := "1.0-SNAPSHOT"
 
+scalaVersion := Versions.scala
+
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.12.6"
-
 libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "$scalatestplusplay_version$" % Test
+libraryDependencies ++= dependencies
 
-// Adds additional packages into Twirl
-//TwirlKeys.templateImports += "$organization$.controllers._"
-
-// Adds additional packages into conf/routes
-// play.sbt.routes.RoutesKeys.routesImport += "$organization$.binders._"
+dependencyUpgradeModuleNames := Map(
+  "dryad-consul" -> "dryad",
+  "scala-library" -> "scala"
+)
