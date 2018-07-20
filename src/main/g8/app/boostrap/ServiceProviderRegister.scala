@@ -22,7 +22,7 @@ import play.api.Logger
 @Singleton
 class ServiceProviderRegister @Inject() (router: Router, app: Application, lifecycle: ApplicationLifecycle) {
 
-  private[this] lazy val regex: String = """\$\w+<([^$]+)>"""
+  private[this] lazy val regex: String = """\\$\w+<([^$]+)>"""
 
   register()
 
