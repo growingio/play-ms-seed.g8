@@ -1,6 +1,5 @@
 package binding
 
-import grpc.HelloServiceImpl
 import io.growing.micros.play.binding.GrpcServicesBinding
 import javax.inject.Singleton
 
