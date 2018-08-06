@@ -1,7 +1,7 @@
 package dao
 
 import com.google.inject.ImplementedBy
-import dao.impl.$model;format="Camel"Dao$Impl
+import dao.impl.$model;format="Camel"$DaoImpl
 import model.$model;format="Camel"$
 
 import scala.concurrent.Future
