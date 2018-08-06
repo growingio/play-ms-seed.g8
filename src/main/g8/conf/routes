@@ -5,7 +5,6 @@
 
 # Healthy check controller
 
-GET        /healthy-check        controllers.HealthyCheckController.healthyCheck()
+GET        /healthy-check        controller.HealthyCheckController.healthyCheck()
 
-# An example controller showing a sample home page
-GET        /:name                controllers.HelloController.index(name: String)
+GET        /:name                controller.HelloController.index(name: String)

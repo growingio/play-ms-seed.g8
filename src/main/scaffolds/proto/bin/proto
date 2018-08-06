@@ -1,0 +1,11 @@
+#!/bin/bash
+PROJECT_HOME=`pwd`
+PROJECT_NAME=$model$-proto
+SRC_DIR=\$PROJECT_HOME/\$PROJECT_NAME/src/main/proto
+PLUGIN=~/.protoc/plugins/protoc-gen-grpc-java-1.13.2-osx-x86_64.exe
+JAVA_OUT=\$PROJECT_HOME/\$PROJECT_NAME/target/scala-2.12/src_managed/main
+rm -rf \$JAVA_OUT
+mkdir -p \$JAVA_OUT
+protoc -I=\$SRC_DIR --java_out=\$JAVA_OUT \$SRC_DIR/$model$.proto
+protoc --plugin=protoc-gen-grpc-java=\$PLUGIN \
+  --grpc-java_out="\$JAVA_OUT" --proto_path="\$SRC_DIR" "$model$.proto"
