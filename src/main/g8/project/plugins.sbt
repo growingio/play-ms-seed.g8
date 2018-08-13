@@ -1,5 +1,7 @@
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "$play_version$")
 
+addSbtPlugin("org.jmotor.sbt" % "sbt-protoc" % "1.0.0")
+
 addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.3")
 
 addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.8.2")
