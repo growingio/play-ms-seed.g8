@@ -5,3 +5,4 @@ src_managed/
 project/plugins/project/
 .idea
 .g8
+.DS_Store
