@@ -48,7 +48,7 @@ object Dependencies {
     val zipkinTracing = "jp.co.bizreach" %% "play-zipkin-tracing-play" % Versions.playZipkinTracingPlay
   }
 
-  val ravenLog4j2 = Seq(
+  val log4j2 = Seq(
     "org.apache.logging.log4j" % "log4j-slf4j-impl" % Versions.log4j2,
     "org.apache.logging.log4j" % "log4j-api" % Versions.log4j2,
     "org.apache.logging.log4j" % "log4j-core" % Versions.log4j2)
