@@ -63,7 +63,7 @@ object Dependencies {
     grpc ++
       slickPg ++
       playSlick ++
-      ravenLog4j2 ++
+      log4j2 ++
       Seq(dryad, slick, micros, postgresql, zipkinTracing, Tests.scalatestPlus)
 
 }
